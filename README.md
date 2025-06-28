@@ -48,7 +48,7 @@ elearning-site/
 
 ### 2️⃣ Create and Configure S3 Bucket
 
-- Create S3 bucket (e.g., `elearning-site-mm`)  
+- Create S3 bucket (e.g., `elearning-site-your name`)  
 - Enable Static Website Hosting  
 - Upload all files  
 - Set index document: `index.html`  
@@ -61,7 +61,7 @@ elearning-site/
 ### 3️⃣ Deploy via AWS CLI
 
 ```bash
-aws s3 cp . s3://elearning-site-mm/ --recursive
+aws s3 cp . s3://elearning-site-your name/ --recursive
 ```
 
 📸 *Screenshot: CloudShell upload*
@@ -91,6 +91,85 @@ git push -u origin main
 ```
 
 📸 *GitHub repo screenshot*
+
+---
+
+### 5️⃣ 🔐 Create IAM Role for GitHub Actions (OIDC)
+- Go to IAM > Identity providers > Add GitHub as OIDC provider
+- Create a new IAM Role with trust policy for GitHub and attach policy:          
+```bash
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:DeleteObject",
+        "cloudfront:CreateInvalidation"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+
+```
+
+📸 *GitHub repo screenshot*
+
+---
+### 5️⃣ ⚙️ Add GitHub Actions Workflow
+- Create .github/workflows/deploy.yml in your project:          
+```bash
+name: Deploy to S3 and Invalidate CloudFront
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::ACCOUNT_ID:role/github-deploy-role
+          aws-region: us-east-1
+
+      - name: Deploy to S3
+        run: |
+          aws s3 sync . s3://your-bucket-name --delete
+
+      - name: Invalidate CloudFront
+        run: |
+          aws cloudfront create-invalidation --distribution-id YOUR_DIST_ID --paths "/*"
+
+
+```
+
+📸 *GitHub repo screenshot*
+
+---
+### 3️⃣ 🚀 Push to Deploy
+
+```bash
+git add .
+git commit -m "🚀 New deployment"
+git push
+
+```
+
+📸 *Screenshot: CloudShell upload*
 
 ---
 

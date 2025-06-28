@@ -9,7 +9,7 @@ Built using **HTML, CSS, JS**, deployed via **AWS CloudShell** and **AWS CLI**, 
 
 ## 📌 Architecture
 
-![Architecture Diagram](assets/architecture-diagram.png)
+![Architecture Diagram](assets/Architecture1-diagram.png)
 
 ---
 
@@ -43,6 +43,7 @@ elearning-site/
 ```
 
 📸 *Add screenshot of file structure*
+![File structure](assets/file-structure.png)
 
 ---
 
@@ -55,6 +56,7 @@ elearning-site/
 - Make content public (adjust block settings + bucket policy)  
 
 📸 *Add screenshot of S3 setup*
+![S3 static hosting](assets/s3-setup-screenshot.png)
 
 ---
 
@@ -65,6 +67,7 @@ aws s3 cp . s3://elearning-site-your name/ --recursive
 ```
 
 📸 *Screenshot: CloudShell upload*
+![cli screenshot](assets/cli-screenshot.png)
 
 ---
 
@@ -76,6 +79,7 @@ aws s3 cp . s3://elearning-site-your name/ --recursive
 - Deploy and wait for status `Deployed`  
 
 📸 *Add screenshot of CloudFront setup*
+![cloudfront](assets/cloudfront-screenshot.png)
 
 ---
 
@@ -91,6 +95,7 @@ git push -u origin main
 ```
 
 📸 *GitHub repo screenshot*
+![GitHub](assets/github-screenshot.png)
 
 ---
 
@@ -115,7 +120,8 @@ git push -u origin main
 
 ```
 
-📸 *GitHub repo screenshot*
+📸 *IAM  screenshot*
+![IAM screenshot](assets/iam-screenshot.png)
 
 ---
 ### 5️⃣ ⚙️ Add GitHub Actions Workflow
@@ -157,7 +163,8 @@ jobs:
 
 ```
 
-📸 *GitHub repo screenshot*
+📸 *workflow screenshot*
+![workflow](assets/workflow-screenshot.png)
 
 ---
 ### 3️⃣ 🚀 Push to Deploy
@@ -170,6 +177,7 @@ git push
 ```
 
 📸 *Screenshot: CloudShell upload*
+![sucess](assets/sucess-screenshot.png)
 
 ---
 

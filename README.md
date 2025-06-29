@@ -9,7 +9,7 @@ Built using **HTML, CSS, JS**, deployed via **AWS CloudShell** and **AWS CLI**, 
 
 ## 📌 Architecture
 
-![Architecture Diagram](asset/Architecture1-diagram.png)
+![Architecture Diagram](asset/Architecture1-Diagram.png)
 
 ---
 

@@ -56,7 +56,7 @@ elearning-site/
 - Make content public (adjust block settings + bucket policy)  
 
 📸 *Add screenshot of S3 setup*
-![S3 static hosting](assets/s3-setup-screenshot.png)
+![S3 static hosting](assets/s3-setup1-screenshot.png)
 
 ---
 

@@ -9,7 +9,7 @@ Built using **HTML, CSS, JS**, deployed via **AWS CloudShell** and **AWS CLI**, 
 
 ## 📌 Architecture
 
-![Architecture Diagram](assets/Architecture1-diagram.png)
+![Architecture Diagram](asset/Architecture1-diagram.png)
 
 ---
 
@@ -43,7 +43,7 @@ elearning-site/
 ```
 
 📸 *Add screenshot of file structure*
-![File structure](assets/file-structure.png)
+![File structure](asset/file-structure.png)
 
 ---
 
@@ -56,7 +56,7 @@ elearning-site/
 - Make content public (adjust block settings + bucket policy)  
 
 📸 *Add screenshot of S3 setup*
-![S3 static hosting](assets/s3-setup1-screenshot.png)
+![S3 static hosting](asset/s3-setup1-screenshot.png)
 
 ---
 
@@ -67,7 +67,7 @@ aws s3 cp . s3://elearning-site-your name/ --recursive
 ```
 
 📸 *Screenshot: CloudShell upload*
-![cli screenshot](assets/cli-screenshot.png)
+![cli screenshot](asset/cli-screenshot.png)
 
 ---
 
@@ -79,7 +79,7 @@ aws s3 cp . s3://elearning-site-your name/ --recursive
 - Deploy and wait for status `Deployed`  
 
 📸 *Add screenshot of CloudFront setup*
-![cloudfront](assets/cloudfront-screenshot.png)
+![cloudfront](asset/cloudfront-screenshot.png)
 
 ---
 
@@ -95,7 +95,7 @@ git push -u origin main
 ```
 
 📸 *GitHub repo screenshot*
-![GitHub](assets/github-screenshot.png)
+![GitHub](asset/github-screenshot.png)
 
 ---
 
@@ -121,7 +121,7 @@ git push -u origin main
 ```
 
 📸 *IAM  screenshot*
-![IAM screenshot](assets/iam-screenshot.png)
+![IAM screenshot](asset/iam-screenshot.png)
 
 ---
 ### 5️⃣ ⚙️ Add GitHub Actions Workflow
@@ -164,7 +164,7 @@ jobs:
 ```
 
 📸 *workflow screenshot*
-![workflow](assets/workflow-screenshot.png)
+![workflow](asset/workflow-screenshot.png)
 
 ---
 ### 3️⃣ 🚀 Push to Deploy
@@ -177,7 +177,7 @@ git push
 ```
 
 📸 *Screenshot: CloudShell upload*
-![sucess](assets/sucess-screenshot.png)
+![sucess](asset/sucess-screenshot.png)
 
 ---
 

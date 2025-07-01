@@ -99,7 +99,7 @@ git push -u origin main
 
 ---
 
-### 5️⃣ 🔐 Create IAM Role for GitHub Actions (OIDC)
+### 6️⃣ 🔐 Create IAM Role for GitHub Actions (OIDC)
 - Go to IAM > Identity providers > Add GitHub as OIDC provider
 - Create a new IAM Role with trust policy for GitHub and attach policy:          
 ```bash
@@ -124,7 +124,7 @@ git push -u origin main
 ![IAM screenshot](asset/iam-screenshot.png)
 
 ---
-### 5️⃣ ⚙️ Add GitHub Actions Workflow
+### 7️⃣ ⚙️ Add GitHub Actions Workflow
 - Create .github/workflows/deploy.yml in your project:          
 ```bash
 name: Deploy to S3 and Invalidate CloudFront
@@ -167,7 +167,7 @@ jobs:
 ![workflow](asset/workflow-screenshot.png)
 
 ---
-### 3️⃣ 🚀 Push to Deploy
+### 8️⃣ 🚀 Push to Deploy
 
 ```bash
 git add .

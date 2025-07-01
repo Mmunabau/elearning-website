@@ -42,7 +42,7 @@ elearning-site/
     └── images/
 ```
 
-📸 *Add screenshot of file structure*
+📸 * screenshot of file structure*
 ![File structure](asset/file-structure.png)
 
 ---
@@ -55,7 +55,7 @@ elearning-site/
 - Set index document: `index.html`  
 - Make content public (adjust block settings + bucket policy)  
 
-📸 *Add screenshot of S3 setup*
+📸 * screenshot of S3 setup*
 ![S3 static hosting](asset/s3-setup1-screenshot.png)
 
 ---
@@ -78,7 +78,7 @@ aws s3 cp . s3://elearning-site-your name/ --recursive
 - Enable “Redirect HTTP to HTTPS”  
 - Deploy and wait for status `Deployed`  
 
-📸 *Add screenshot of CloudFront setup*
+📸 * screenshot of CloudFront setup*
 ![cloudfront](asset/cloudfront-screenshot.png)
 
 ---
@@ -176,7 +176,7 @@ git push
 
 ```
 
-📸 *Screenshot: CloudShell upload*
+📸 *Screenshot: CI/CD upload*
 ![sucess](asset/sucess-screenshot.png)
 
 ---
